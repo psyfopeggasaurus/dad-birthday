@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Happy 53rd Birthday Dad</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Georgia', serif;
+            line-height: 1.6;
+            color: #2c3e50;
+            overflow-x: hidden;
+        }
+
+        /* Hero Section */
+        .hero {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .confetti {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: #8d6e63;
+            animation: fall 4s linear infinite;
+        }
+
+        @keyframes fall {
+            to { transform: translateY(100vh) rotate(360deg); }
+        }
+
+        .hero h1 {
+            font-size: clamp(2rem, 8vw, 4rem);
+            color: #a1887f;
+            margin-bottom: 1rem;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.5);
+            animation: fadeIn 1.5s ease-in;
+        }
+
+        .hero h2 {
+            font-size: clamp(1.5rem, 5vw, 2.5rem);
+            color: #fff;
+            margin-bottom: 0.5rem;
+        }
+
+        .hero .date {
+            font-size: clamp(1.2rem, 4vw, 1.8rem);
+            color: #bcaaa4;
+            margin-bottom: 2rem;
+        }
+
+        .hero p {
+            max-width: 600px;
+            font-size: clamp(1rem, 3vw, 1.2rem);
+            color: #e0e0e0;
+            line-height: 1.8;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(-30px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Section Styling */
+        section {
+            padding: 4rem 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        section:nth-child(even) {
+            background: #f8f9fa;
+        }
+
+        h2 {
+            font-size: clamp(2rem, 6vw, 3rem);
+            color: #1a1a1a;
+            margin-bottom: 2rem;
+            text-align: center;
+            position: relative;
+            padding-bottom: 1rem;
+        }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: #8d6e63;
+            border-radius: 2px;
+        }
+
+        /* About Section */
+        .about-content {
+            max-width: 800px;
+            margin: 0 auto;
+            font-size: clamp(1rem, 3vw, 1.1rem);
+            line-height: 1.9;
+        }
+
+        .timeline {
+            margin-top: 3rem;
+            padding: 2rem;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+        }
+
+        .timeline-item {
+            padding: 1rem 0;
+            border-left: 3px solid #8d6e63;
+            padding-left: 2rem;
+            margin-bottom: 1.5rem;
+            position: relative;
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -8px;
+            top: 1.5rem;
+            width: 13px;
+            height: 13px;
+            background: #8d6e63;
+            border-radius: 50%;
+        }
+
+        .timeline-year {
+            font-weight: bold;
+            color: #6d4c41;
+            font-size: 1.2rem;
+        }
+
+        /* Music Section */
+        .music {
+            background: linear-gradient(135deg, #4e342e 0%, #5d4037 100%);
+            color: white;
+        }
+
+        .music h2 {
+            color: #bcaaa4;
+        }
+
+        .playlist {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .song-card {
+            background: rgba(255,255,255,0.1);
+            padding: 2rem;
+            border-radius: 10px;
+            text-align: center;
+            transition: transform 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .song-card:hover {
+            transform: translateY(-10px);
+            background: rgba(255,255,255,0.15);
+        }
+
+        .song-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        /* Pirates Section */
+        .pirates {
+            background: #000;
+            color: white;
+            padding: 4rem 2rem;
+        }
+
+        .pirates h2 {
+            color: #fff;
+        }
+
+        .pirates-content {
+            max-width: 800px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .pirates-logo {
+            font-size: 8rem;
+            margin: 2rem 0;
+            animation: spin 20s linear infinite;
+        }
+
+        @keyframes spin {
+            from { transform: rotate(0deg); }
+            to { transform: rotate(360deg); }
+        }
+
+        .pirates-colors {
+            display: flex;
+            justify-content: center;
+            gap: 2rem;
+            margin: 2rem 0;
+        }
+
+        .color-box {
+            width: 100px;
+            height: 100px;
+            border: 3px solid #8d6e63;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+        }
+
+        /* Cars Section */
+        .cars-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .car-card {
+            background: white;
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+        }
+
+        .car-card:hover {
+            transform: scale(1.05);
+        }
+
+        .car-placeholder {
+            height: 200px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+        }
+
+        .car-info {
+            padding: 1.5rem;
+        }
+
+        /* Photo Gallery */
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1.5rem;
+            margin-top: 2rem;
+        }
+
+        .photo-placeholder {
+            aspect-ratio: 1;
+            background: linear-gradient(135deg, #f093fb 0%, #f5576c 100%);
+            border-radius: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+
+        .photo-placeholder:hover {
+            transform: scale(1.05);
+        }
+
+        /* Message Section */
+        .message {
+            background: linear-gradient(135deg, #3e2723 0%, #5d4037 100%);
+            color: white;
+            text-align: center;
+        }
+
+        .message h2 {
+            color: #bcaaa4;
+        }
+
+        .message-content {
+            max-width: 700px;
+            margin: 0 auto;
+            font-size: clamp(1.1rem, 3vw, 1.3rem);
+            line-height: 2;
+            font-style: italic;
+        }
+
+        .message p:last-child {
+            margin-top: 2rem;
+            font-size: 1.4rem;
+            color: #a1887f;
+        }
+
+        /* Toast Section */
+        .toast {
+            background: #4e342e;
+            color: white;
+            text-align: center;
+            padding: 4rem 2rem;
+        }
+
+        .toast h2 {
+            color: #bcaaa4;
+        }
+
+        .toast-icon {
+            font-size: 5rem;
+            margin: 2rem 0;
+            animation: clink 2s ease-in-out infinite;
+        }
+
+        @keyframes clink {
+            0%, 100% { transform: rotate(-5deg); }
+            50% { transform: rotate(5deg); }
+        }
+
+        .toast-text {
+            font-size: clamp(1.2rem, 4vw, 1.5rem);
+            max-width: 600px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+
+        .toast-text p:nth-child(2) {
+            margin: 2rem 0;
+            font-size: 1.6rem;
+            font-weight: bold;
+            color: #a1887f;
+        }
+
+        /* Birthday Wishes Section */
+        .wishes-section {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+        }
+
+        .wishes-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .wish-card {
+            background: white;
+            padding: 2rem;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            transition: transform 0.3s, box-shadow 0.3s;
+        }
+
+        .wish-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 15px rgba(0,0,0,0.2);
+        }
+
+        .wish-header {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .wish-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            color: #1a1a1a;
+        }
+
+        .wish-relation {
+            color: #8d6e63;
+            font-size: 1rem;
+            margin: 0;
+            font-weight: 600;
+        }
+
+        .wish-message {
+            font-size: 1.05rem;
+            line-height: 1.8;
+            color: #2c3e50;
+            font-style: italic;
+            text-align: left;
+        }
+
+        /* Footer */
+        footer {
+            background: #3e2723;
+            color: #bcaaa4;
+            text-align: center;
+            padding: 2rem;
+            font-size: 1.1rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .hero {
+                padding: 1.5rem;
+            }
+            
+            section {
+                padding: 3rem 1.5rem;
+            }
+
+            .timeline-item {
+                padding-left: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Hero Section -->
+    <div class="hero">
+        <div id="confetti-container"></div>
+        <h1>🎉 Happy 53rd Birthday! 🎉</h1>
+        <h2>Celebrating an Extraordinary Man</h2>
+        <p class="date">11 December 1972 - 11 December 2025</p>
+        <p>Today we celebrate not just another year, but 53 years of wisdom, dedication, and impact. A man who has shaped minds, inspired hearts, and built a legacy that will endure for generations. This is your day, Dad.</p>
+    </div>
+
+    <!-- About Section -->
+    <section class="about">
+        <h2>About My Dad</h2>
+        <div class="about-content">
+            <p>Born on the 11th of December 1972 in Madadeni, KwaZulu-Natal, my father has always been a man of principle, passion, and purpose. As an educator, he has dedicated his life to shaping young minds and advocating for quality education in our communities.</p>
+            
+            <p>From the streets of Madadeni to the classrooms where he's inspired countless students, his journey has been one of resilience and commitment. He embodies the values of wisdom, discipline, community, and yes—a good sense of humour that can light up any room.</p>
+
+            <p>A true South African at heart, he carries the hopes and struggles of our people in everything he does. His socialist beliefs aren't just political—they're a reflection of his deep commitment to equality, justice, and the upliftment of all people.</p>
+
+            <div class="timeline">
+                <h3 style="text-align: center; margin-bottom: 2rem; color: #6d4c41;">Life Journey</h3>
+                <div class="timeline-item">
+                    <div class="timeline-year">1972</div>
+                    <p>Born in Madadeni, KwaZulu-Natal, during a pivotal time in South African history</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">1990s</div>
+                    <p>Witnessed the dawn of democracy and dedicated himself to education</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2000s</div>
+                    <p>Built a legacy as an educator, touching countless lives</p>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-year">2025</div>
+                    <p>Celebrating 53 years of wisdom, passion, and impact</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Music Section -->
+    <section class="music">
+        <h2>🎵 His Soundtrack: Classic Soul & R&B</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">The music that moves his soul</p>
+         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Some of the best his favorites have to offer</p> 
+        <div class="playlist">
+            <div class="song-card">
+                <div class="song-icon">🎤</div>
+                <h3>Teddy Pendergrass</h3>
+                <p>"Turn Off the Lights"</p>
+                <p>"Love TKO"</p>
+            </div>
+            <div class="song-card">
+                <div class="song-icon">🎼</div>
+                <h3>Luther Vandross</h3>
+                <p>"Never Too Much"</p>
+                <p>"Dance With My Father"</p>
+            </div>
+            <div class="song-card">
+                <div class="song-icon">🎹</div>
+                <h3>Marvin Gaye</h3>
+                <p>"What's Going On"</p>
+                <p>"Let's Get It On"</p>
+            </div>
+            <div class="song-card">
+                <div class="song-icon">🎸</div>
+                <h3>The Isley Brothers</h3>
+                <p>"Between the Sheets"</p>
+                <p>"For the Love of You"</p>
+            </div>
+            <div class="song-card">
+                <div class="song-icon">🎺</div>
+                <h3>Lionel Richie</h3>
+                <p>"Hello"</p>
+                <p>"Easy"</p>
+            </div>
+
+            <div class="song-card">
+                <div class="song-icon">🎶</div>
+                <h3>One Way</h3>
+                <p>"Who's Foolin' Who"</p>
+                <p>80s R&B classic</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pirates Section -->
+    <section class="pirates">
+        <h2>⚫⚪ Once a Pirate, Always a Pirate</h2>
+        <div class="pirates-content">
+            <div class="pirates-logo">⚽</div>
+            <h3 style="font-size: 2rem; color: #000;margin-bottom: 1rem;">Orlando Pirates FC</h3>
+            
+            <div class="pirates-colors">
+                <div class="color-box" style="background: #000;">BLACK</div>
+                <div class="color-box" style="background: #fff; color: #000;">WHITE</div>
+            </div>
+
+            <p style="font-size: 1.2rem; line-height: 1.8; margin: 2rem 0; color: #000;">
+                To understand my father is to understand his love for the Buccaneers. Orlando Pirates isn't just a football club—it's a symbol of excellence, pride, and the fighting spirit of our people. Through victories and defeats, his loyalty never wavers. The Skull and Crossbones flag flies high in his heart, representing decades of passion, unforgettable matches, and the beautiful game played with soul.
+            </p>
+
+            <p style="font-size: 1.1rem; color: #060606;">
+                "Once a Pirate, Always a Pirate" — A motto for football, a philosophy for life.
+            </p>
+        </div>
+    </section>
+
+    <!-- Cars Section -->
+    <section class="cars">
+        <h2>🚗 His Love for the Road</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Classic cars, German engineering, timeless style</p>
+        
+        <div class="cars-grid">
+            <div class="car-card">
+      <img src="https://drive.google.com/file/d/1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV.jpeg" alt="gt" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                <div class="car-info">
+                    <h3>VW Golf</h3>
+                    <p>The icon. Reliable, stylish, and built to last—just like the values he lives by.</p>
+                </div>
+            </div>
+            <div class="car-card">
+           <img src="https://drive.google.com/file/d/1OOs3S0QS4gRdIfjixTaCStc4lZnizTGG/view?usp=share_link.jpeg" alt="polo" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">>
+                <div class="car-info">
+                    <h3>VW Polo</h3>
+                    <p>Compact excellence. The perfect blend of practicality and German precision.</p>
+                </div>
+            </div>
+            <div class="car-card">
+               <img src="https://drive.google.com/file/d/1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV/view?usp=share_link" alt="jetta" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                <div class="car-info">
+                    <h3>VW Jetta</h3>
+                    <p>Sophistication on wheels. For the man who appreciates the finer details.</p>
+                </div>
+            </div>
+            <div class="car-card">
+             <img src="https://drive.google.com/file/d/1AusewlQLhhBImjnaYwtO6rW-EseGMsJU/view?usp=share_link.jpeg" alt="benz" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                <div class="car-info">
+                    <h3>Mercedes-Benz</h3>
+                    <p>When only the best will do. A symbol of achievement and refined taste.</p>
+                </div>
+            </div>
+        </div>
+        
+        <p style="text-align: center; margin-top: 3rem; font-size: 1.1rem; font-style: italic;">
+            These cars remind me of you—strong, dependable, built with precision, and carrying a legacy of excellence. Every journey in these machines was a lesson in appreciating quality and craftsmanship.
+        </p>
+    </section>
+
+    <!-- Photo Gallery -->
+    <section class="gallery-section">
+        <h2>📸 Memories Through the Years</h2>
+        <div class="gallery">
+          <img src="https://drive.google.com/file/d/1uDoe6i6aLiPCa_BhrXaWXlJ_ux_IPku4.jpeg" alt="Dad" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/file/d/1D618D1yMUjvDwy3-8o3GiaYIZN2aYyTA/view?usp=share_link.jpeg" alt="Chiling" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/file/d/1wAmH3pt7c8umN1TYFz1faH1JFlsCIHsf/view?usp=share_link.jpeg" alt="Gang" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+      <img src="https://drive.google.com/file/d/1y9UE8K2jxbgE_P7H5JK6g7sOTRcxdl4V/view?usp=share_link.jpeg" alt="Wedding" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+         <img src="https://drive.google.com/file/d/1VMFh_yhbmZV3n8uNNTRTdDFI3T4PvVTw/view?usp=share_link.jpeg" alt="OG" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/file/d/1XqZC5UuY5p5wxIB5XdJ2LT2Dxa9Ounn_/view?usp=share_link.jpeg" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+         <img src="https://drive.google.com/file/d/18xtyN6fh45QQxltUzAi-Ufw9avuo614m/view?usp=share_link.jpeg" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+        </div>
+    </section>
+
+    <!-- Message Section -->
+    <section class="message">
+        <h2>A Message From the Heart</h2>
+        <div class="message-content">
+            <p>Dad,</p>
+            
+            <p>53 years ago, the world received a gift, although it would take time for everyone to realize it. You've been a teacher not just by profession but by example. Every lesson you've taught, every principle you've stood for, every moment you've shown us what integrity looks like,these are the gifts that keep giving.</p>
+
+            <p>You taught me that education is liberation, that justice is worth fighting for, and that celebrating life, yes, with a drink in hand and good music playing is not just allowed but necessary. You've shown me what it means to be rooted in your community while reaching for the stars.</p>
+
+            <p>From Madadeni to everywhere your influence has reached, you've left footprints of wisdom. You've proven that a man can love soccer and socialism, VW and Vandross, politics and parties ,all while maintaining his dignity and purpose.</p>
+
+            <p>Thank you for being the standard by which I measure excellence. Thank you for your laughter, your conviction, your unwavering support. Thank you for being exactly who you are.</p>
+
+            <p>Here's to 53 years of an extraordinary life, and to many more years of health, happiness, and the continued pursuit of everything that makes you smile.</p>
+
+            <p style="margin-top: 2rem; font-size: 1.4rem; color: #a1887f;">With all my love and respect,<br>Your Child</p>
+        </div>
+    </section>
+
+    <!-- Birthday Wishes Section -->
+    <section class="wishes-section">
+        <h2>💝 Birthday Wishes From Those Who Love You</h2>
+        <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
+            Messages from family, friends, and the kids who grew up with us
+        </p>
+        
+        <div class="wishes-grid">
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-avatar">
+                        <img src="https://drive.google.com/file/d/1G4tIzRYUgTUs-zt9desFapfDqETWlwhR/view?usp=share_link.jpeg" alt="Danny">
+                    </div>
+                    <div>
+                        <h3>Danny</h3>
+                        <p class="wish-relation">Family Friend</p>
+                    </div>
+                </div>
+                <p class="wish-message">
+                    "Bab Zikalala ngibongela ubudlelwani bakho no Bab Mhlongo. It allowed me to have a brother through uZano . Happy Birthday day ngithembe uzoqubekha uphila kahle baba"
+                </p>
+            </div>
+
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-avatar">
+                        <img src="https://drive.google.com/file/d/1XKsXt-j4V-zvgyFO668gb-Nbmd3JPQyQ/view?usp=drivesdk.jpeg" alt="Mommy">
+                    </div>
+                    <div>
+                        <h3>Mama</h3>
+                        <p class="wish-relation">Wife</p>
+                    </div>
+                </div>
+                <p class="wish-message">
+                    "HBD ukhule nje okuhle kodwa.Uzokwazi ukufezekusa icebo laNkulunkulu akulethela lona lana emhlabeni. Hip hip hooray"
+            </div>
+
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-avatar">
+                        <img src="https://drive.google.com/file/d/1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp/view?usp=share_link.jpeg" alt="Tumi">
+                    </div>
+                    <div>
+                        <h3>Tumi</h3>
+                        <p class="wish-relation">Daughter</p>
+                    </div>
+                </div>
+                <p class="wish-message">
+                    Happy birthday! I hope all your birthday wishes and dreams come true."</p>
+            </div>
+
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-avatar">
+                        <img src="https://drive.google.com/file/d/1c6WAURIs4ZPUu565u5svSq5NHK2TQAMB/view?usp=share_link.jpeg" alt="Sthe">
+                    </div>
+                    <div>
+                        <h3>Mzizi</h3>
+                        <p class="wish-relation">Family Friend</p>
+                    </div>
+                </div>
+                <p class="wish-message">
+                    "Wishing you a  happy birthday. Your kindness and wisdom inspire those around you. May the coming years bring health, peace, and joy. You’ve built a legacy of strength and care. We celebrate not just your years, but the impact you’ve made. May your day be filled with love and gratitude." </p>
+            </div>
+
+            <div class="wish-card">
+                <div class="wish-header">
+                    <div class="wish-avatar">
+                        <img src="https://drive.google.com/file/d/1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp/view?usp=share_link.jpeg" alt="Asiphe">
+                    </div>
+                    <div>
+                        <h3>Timotiee</h3>
+                        <p class="wish-relation">Granddaughter</p>
+                    </div>
+                </div>
+                <p class="wish-message">
+                    "Happy Birthday"
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Toast Section -->
+    <section class="toast">
+        <h2>🥃 A Birthday Toast</h2>
+        <div class="toast-icon">🍻</div>
+        <div class="toast-text">
+            <p>Here's to the man who taught us that life is meant to be lived fully and celebrated boldly.</p>
+            
+            <p style="margin: 2rem 0; font-size: 1.6rem; font-weight: bold; color: #a1887f;">
+                "To 53 years of wisdom, to every victory on and off the field, to every lesson taught and life touched may your glass always be full, your heart always be light, and your legacy continue to inspire. Cheers to you, Pa!"
+            </p>
+            
+            <p style="font-size: 1.3rem;">🥂 Happy Birthday! 🎉</p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <p>✨ Made with love for Baba Poe ✨</p>
+        <p style="margin-top: 1rem;">11 December 2025</p>
+    </footer>
+
+    <script>
+        // Confetti animation
+        function createConfetti() {
+            const container = document.getElementById('confetti-container');
+            const colors = ['#8d6e63', '#a1887f', '#bcaaa4', '#6d4c41'];
+            
+            for (let i = 0; i < 50; i++) {
+                const confetti = document.createElement('div');
+                confetti.className = 'confetti';
+                confetti.style.left = Math.random() * 100 + '%';
+                confetti.style.animationDelay = Math.random() * 4 + 's';
+                confetti.style.background = colors[Math.floor(Math.random() * colors.length)];
+                container.appendChild(confetti);
+            }
+        }
+
+        createConfetti();
+
+        // Smooth scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({ behavior: 'smooth' });
+                }
+            });
+        });
+    </script>
+</body>
+</html>
