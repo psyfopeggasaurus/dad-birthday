@@ -381,6 +381,22 @@
             margin-bottom: 1.5rem;
         }
 
+        /* ADDED: Styling for the avatar images */
+        .wish-avatar {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            overflow: hidden;
+            flex-shrink: 0;
+            border: 2px solid #8d6e63;
+        }
+
+        .wish-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
         .wish-header h3 {
             margin: 0;
             font-size: 1.5rem;
@@ -428,7 +444,6 @@
     </style>
 </head>
 <body>
-    <!-- Hero Section -->
     <div class="hero">
         <div id="confetti-container"></div>
         <h1>🎉 Happy 53rd Birthday! 🎉</h1>
@@ -437,7 +452,6 @@
         <p>Today we celebrate not just another year, but 53 years of wisdom, dedication, and impact. A man who has shaped minds, inspired hearts, and built a legacy that will endure for generations. This is your day, Dad.</p>
     </div>
 
-    <!-- About Section -->
     <section class="about">
         <h2>About My Dad</h2>
         <div class="about-content">
@@ -469,7 +483,6 @@
         </div>
     </section>
 
-    <!-- Music Section -->
     <section class="music">
         <h2>🎵 His Soundtrack: Classic Soul & R&B</h2>
         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">The music that moves his soul</p>
@@ -515,7 +528,6 @@
         </div>
     </section>
 
-    <!-- Pirates Section -->
     <section class="pirates">
         <h2>⚫⚪ Once a Pirate, Always a Pirate</h2>
         <div class="pirates-content">
@@ -537,35 +549,34 @@
         </div>
     </section>
 
-    <!-- Cars Section -->
     <section class="cars">
         <h2>🚗 His Love for the Road</h2>
         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 2rem;">Classic cars, German engineering, timeless style</p>
         
         <div class="cars-grid">
             <div class="car-card">
-      <img src="https://drive.google.com/file/d/1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV/view?usp=share_link" alt="gt" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+                <img src="https://drive.google.com/uc?export=view&id=1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV" alt="gt" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
                 <div class="car-info">
                     <h3>VW Golf</h3>
                     <p>The icon. Reliable, stylish, and built to last—just like the values he lives by.</p>
                 </div>
             </div>
             <div class="car-card">
-           <img src="https://drive.google.com/file/d/1OOs3S0QS4gRdIfjixTaCStc4lZnizTGG/view?usp=share_link" alt="polo" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">>
+                <img src="https://drive.google.com/uc?export=view&id=1OOs3S0QS4gRdIfjixTaCStc4lZnizTGG" alt="polo" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
                 <div class="car-info">
                     <h3>VW Polo</h3>
                     <p>Compact excellence. The perfect blend of practicality and German precision.</p>
                 </div>
             </div>
             <div class="car-card">
-               <img src="https://drive.google.com/file/d/1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV/view?usp=share_link" alt="jetta" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+               <img src="https://drive.google.com/uc?export=view&id=1TXMX4yIsHJjGasWYneqbYBGcAO-1TxrV" alt="jetta" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
                 <div class="car-info">
                     <h3>VW Jetta</h3>
                     <p>Sophistication on wheels. For the man who appreciates the finer details.</p>
                 </div>
             </div>
             <div class="car-card">
-             <img src="https://drive.google.com/file/d/1AusewlQLhhBImjnaYwtO6rW-EseGMsJU/view?usp=share_link" alt="benz" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+             <img src="https://drive.google.com/uc?export=view&id=1AusewlQLhhBImjnaYwtO6rW-EseGMsJU" alt="benz" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
                 <div class="car-info">
                     <h3>Mercedes-Benz</h3>
                     <p>When only the best will do. A symbol of achievement and refined taste.</p>
@@ -578,21 +589,19 @@
         </p>
     </section>
 
-    <!-- Photo Gallery -->
     <section class="gallery-section">
         <h2>📸 Memories Through the Years</h2>
         <div class="gallery">
-          <img src="https://drive.google.com/file/d/1uDoe6i6aLiPCa_BhrXaWXlJ_ux_IPku4/view?usp=share_link" alt="Dad" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-          <img src="https://drive.google.com/file/d/1D618D1yMUjvDwy3-8o3GiaYIZN2aYyTA/view?usp=share_link" alt="Chiling" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-          <img src="https://drive.google.com/file/d/1wAmH3pt7c8umN1TYFz1faH1JFlsCIHsf/view?usp=share_link" alt="Gang" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-      <img src="https://drive.google.com/file/d/1y9UE8K2jxbgE_P7H5JK6g7sOTRcxdl4V/view?usp=share_link" alt="Wedding" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-         <img src="https://drive.google.com/file/d/1VMFh_yhbmZV3n8uNNTRTdDFI3T4PvVTw/view?usp=share_link" alt="OG" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-          <img src="https://drive.google.com/file/d/1XqZC5UuY5p5wxIB5XdJ2LT2Dxa9Ounn_/view?usp=share_link" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
-         <img src="https://drive.google.com/file/d/18xtyN6fh45QQxltUzAi-Ufw9avuo614m/view?usp=share_link" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1uDoe6i6aLiPCa_BhrXaWXlJ_ux_IPku4" alt="Dad" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1D618D1yMUjvDwy3-8o3GiaYIZN2aYyTA" alt="Chiling" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1wAmH3pt7c8umN1TYFz1faH1JFlsCIHsf" alt="Gang" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1y9UE8K2jxbgE_P7H5JK6g7sOTRcxdl4V" alt="Wedding" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1VMFh_yhbmZV3n8uNNTRTdDFI3T4PvVTw" alt="OG" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=1XqZC5UuY5p5wxIB5XdJ2LT2Dxa9Ounn_" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
+          <img src="https://drive.google.com/uc?export=view&id=18xtyN6fh45QQxltUzAi-Ufw9avuo614m" alt="Phansi" style="width:100%; height:100%; object-fit:cover; border-radius:10px;">
         </div>
     </section>
 
-    <!-- Message Section -->
     <section class="message">
         <h2>A Message From the Heart</h2>
         <div class="message-content">
@@ -612,7 +621,6 @@
         </div>
     </section>
 
-    <!-- Birthday Wishes Section -->
     <section class="wishes-section">
         <h2>💝 Birthday Wishes From Those Who Love You</h2>
         <p style="text-align: center; font-size: 1.2rem; margin-bottom: 3rem; color: #666;">
@@ -623,7 +631,7 @@
             <div class="wish-card">
                 <div class="wish-header">
                     <div class="wish-avatar">
-                        <img src="https://drive.google.com/file/d/1G4tIzRYUgTUs-zt9desFapfDqETWlwhR/view?usp=share_link" alt="Danny">
+                        <img src="https://drive.google.com/uc?export=view&id=1G4tIzRYUgTUs-zt9desFapfDqETWlwhR" alt="Danny">
                     </div>
                     <div>
                         <h3>Danny</h3>
@@ -638,7 +646,7 @@
             <div class="wish-card">
                 <div class="wish-header">
                     <div class="wish-avatar">
-                        <img src="https://drive.google.com/file/d/1XKsXt-j4V-zvgyFO668gb-Nbmd3JPQyQ/view?usp=drivesdk" alt="Mommy">
+                        <img src="https://drive.google.com/uc?export=view&id=1XKsXt-j4V-zvgyFO668gb-Nbmd3JPQyQ" alt="Mommy">
                     </div>
                     <div>
                         <h3>Mama</h3>
@@ -647,12 +655,13 @@
                 </div>
                 <p class="wish-message">
                     "HBD ukhule nje okuhle kodwa.Uzokwazi ukufezekusa icebo laNkulunkulu akulethela lona lana emhlabeni. Hip hip hooray"
+                </p>
             </div>
 
             <div class="wish-card">
                 <div class="wish-header">
                     <div class="wish-avatar">
-                        <img src="https://drive.google.com/file/d/1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp/view?usp=share_link" alt="Tumi">
+                        <img src="https://drive.google.com/uc?export=view&id=1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp" alt="Tumi">
                     </div>
                     <div>
                         <h3>Tumi</h3>
@@ -666,7 +675,7 @@
             <div class="wish-card">
                 <div class="wish-header">
                     <div class="wish-avatar">
-                        <img src="https://drive.google.com/file/d/1c6WAURIs4ZPUu565u5svSq5NHK2TQAMB/view?usp=share_link" alt="Sthe">
+                        <img src="https://drive.google.com/uc?export=view&id=1c6WAURIs4ZPUu565u5svSq5NHK2TQAMB" alt="Sthe">
                     </div>
                     <div>
                         <h3>Mzizi</h3>
@@ -680,7 +689,7 @@
             <div class="wish-card">
                 <div class="wish-header">
                     <div class="wish-avatar">
-                        <img src="https://drive.google.com/file/d/1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp/view?usp=share_link" alt="Asiphe">
+                        <img src="https://drive.google.com/uc?export=view&id=1WAuiKoUkKR3hF4umOuRjpSMlZlIXitdp" alt="Asiphe">
                     </div>
                     <div>
                         <h3>Timotiee</h3>
@@ -694,7 +703,6 @@
         </div>
     </section>
 
-    <!-- Toast Section -->
     <section class="toast">
         <h2>🥃 A Birthday Toast</h2>
         <div class="toast-icon">🍻</div>
@@ -709,7 +717,6 @@
         </div>
     </section>
 
-    <!-- Footer -->
     <footer>
         <p>✨ Made with love for Baba Poe ✨</p>
         <p style="margin-top: 1rem;">11 December 2025</p>
